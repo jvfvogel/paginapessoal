@@ -1,0 +1,145 @@
+    <!DOCTYPE html>
+
+    <html>
+
+    <head>
+
+        <title> HTML5 </title>
+        <meta name="description" content="como usar as tags do html 5">
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" type="text/css" href="main.css">
+
+
+
+        <script type="text/javascript" >
+            var index = 0;
+
+            function plusIndex(n) {
+
+                index = index + 1;
+                showImage(index);
+            }
+
+            showImage(0);
+
+            function showImage(n) {
+
+                var i;
+                var x = document.getElementsByClassName("slides");
+
+                if (n > x.length) {
+                    index = 1
+                };
+                if (n < 1) {
+                    index = x.length
+                };
+
+                for (i = 0; i < x.length; i++) {
+
+                    x[i].style.display = "none";
+
+                }
+
+
+                x[index - 1].style.display = "block";
+
+
+            }
+            
+        
+
+        </script>
+        
+          
+
+    </head>
+
+    <body>
+
+
+
+
+        <main>
+            <nav>
+
+                <ul>
+
+                    <li> <a href="#"> Início  </a> </li>
+                    <li> <a href="#"> Sobre </a> </li>
+                    <li> <a href="#"> Contato </a> </li>
+
+                    <div id="gremio">
+                        <img src="Imagens/gremio.jpg">
+                    </div>
+                    <div id="divBusca">
+                        <input type="text" id="txtBusca" placeholder="Buscar..." />
+                        <!-- <img src="Imagens/pes.jpg" id="btnBusca" alt="Buscar"/>-->
+                    </div>
+
+                </ul>
+
+
+
+
+            </nav>
+
+
+        </main>
+
+
+        <!--<header>
+
+                <h1> kkkk </h1>
+                <h2> hhhh </h2>
+            </header>-->
+
+        <section id="one">
+
+
+            <img class="slides" src="Imagens/c1.jpg">
+            <img class="slides" src="Imagens/c2.jpg">
+            <img class="slides" src="Imagens/c3.jpg">
+
+
+            <button class="btn" onclick="plusIndex(-1)" id="btn1"> &#10094; </button>
+            <button class="btn" onclick="plusIndex(1)" id="btn2">  &#10095;  </button>
+        </section>
+
+
+        <section id="two">
+            <header>
+
+                <h1> SECTION-two </h1>
+
+            </header>
+
+            <article>
+
+
+
+            </article>
+
+            <footer>
+
+
+
+            </footer>
+
+        </section>
+
+        <footer id="rod">
+
+
+            <hr id="jba">
+            <h4> © 2018 Todos os direitos reservados </h4>
+
+        </footer>
+
+    </body>
+
+
+
+
+
+    </html>
